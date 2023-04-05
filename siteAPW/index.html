@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hamburgueria</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('#contact-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#message');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  const payload = {
+    username: 'Contato Site Hamburgueria',
+    avatar_url: 'https://example.com/avatar.png', // insira o URL da imagem do avatar que deseja usar
+    content: `**Nome:** ${nameInput.value}\n**E-mail:** ${emailInput.value}\n**Mensagem:** ${messageInput.value}`
+  };
+  
+  fetch('https://discord.com/api/webhooks/1093168452996452513/5lDIZ2-UPrM3AqfmtBUACg-JfsZUWC1CW1z1XRrPzZr6DhRv4hDI3F54X9LJFZSEYKYq', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(() => {
+    alert('Mensagem enviada com sucesso!');
+    nameInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+  })
+  .catch(() => {
+    alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.');
+  });
+});
+
+});
+    </script>
+	<header>
+		<h1>Hamburgueria</h1>
+		<nav>
+			<ul>
+				<li><a href="#inicio">Início</a></li>
+				<li><a href="#cardapio">Cardápio</a></li>
+				<li><a href="#pedidos">Pedidos</a></li>
+				<li><a href="#sobre">Sobre Nós</a></li>
+				<li><a href="#contatos">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="inicio">
+			<h2>Bem-vindo à nossa hamburgueria</h2>
+			<p>Aqui você encontra os melhores hambúrgueres da cidade.</p>
+			<a href="#pedido">Faça seu pedido agora</a>
+		</section>
+		<section id="cardapio">
+			<h2>Nosso cardápio</h2>
+			<ul>
+				<li>
+					<h3>Hambúrguer simples</h3>
+					<p>Pão, carne e queijo.</p>
+					<span>R$ 10,00</span>
+				</li>
+				<li>
+					<h3>Hambúrguer duplo</h3>
+					<p>Pão, duas carnes e queijo.</p>
+					<span>R$ 15,00</span>
+				</li>
+				<li>
+					<h3>Batata frita</h3>
+					<p>Porção de batata frita.</p>
+					<span>R$ 5,00</span>
+				</li>
+			</ul>
+		</section>
+		<section id="pedidos">
+			<h2>Como fazer um pedido</h2>
+			<p>Para fazer um pedido, basta entrar em contato conosco pelo telefone ou pelo formulário de contato.</p>
+			<a href="#">Entre em contato agora</a>
+		</section>
+		<section id="sobre">
+			<h2>Sobre nós</h2>
+			<p>Somos uma hamburgueria familiar que preza pela qualidade dos ingredientes e pelo bom atendimento.</p>
+		</section>
+		<section id="contato">
+			<h2>Entre em contato</h2>
+			<form id="contact-form">
+				<label for="nome">Nome:</label>
+				<input type="text" id="name" name="nome">
+				<label for="email">E-mail:</label>
+				<input type="email" id="email" name="email">
+				<label for="mensagem">Mensagem:</label>
+				<textarea id="message" name="mensagem"></textarea>
+				<button type="submit">Enviar</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>Todos os direitos reservados &copy; 2023</p>
+    </footer>
+</body>
+</html>
