@@ -14,6 +14,15 @@ Olá! Me chamo Pedro, tenho 16 anos, sou um aluno da ETEC-MCM e tenho grandes so
 Paulo Augusto
 Me chamo Paulo, estudo na ETEC MCM e tenho 15 anos. Gosto de futebol, jogos e música. Toco bateria e, pretendo estudar e aprender mais sobre, para desenvolver minha carreira com a programação. 
 
+I'm Pedro, I'm 16 years old, I like soccer and to play guitar.
+
+I'm Paulo. I'm 15 years old. I'm Christian and I like the gym.
+
+I'm Nicolas and I'm 16 years old. I like the IT area.
+
+I'm Luiggy, I'm 15 years old. I like playing Chess and Tetris.
+
+My name is Paulo and I'm 15 years old. I like soccer, games and music.
 
 
 
